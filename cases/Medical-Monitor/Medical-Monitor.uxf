@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>100</x>
+      <y>500</y>
+      <w>200</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Constraints
+2 &lt;= ^(e4 - e1) &lt;= 3
+0 &lt; e5-e4 &lt; 1
+1 &lt; ^(e6 - e5) &lt; 2
+0 &lt; e7 - e6 &lt; 1
+1 &lt;= ^(e8 - e7) &lt;= 2
+0 &lt; e9 - e8 &lt; 1
+1 &lt;= ^(e10 - e9) &lt;= 2
+0&lt; e11-e10 &lt;1
+0 &lt; ^(e12 - e11) &lt; 1
+0&lt; e14-e13 &lt;1
+5&lt; e18-e14 &lt;7
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>400</x>
+      <y>500</y>
+      <w>180</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>Properties
+e12-e1&lt;20</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSequenceAllInOne</id>
+    <coordinates>
+      <x>10</x>
+      <y>10</y>
+      <w>1000</w>
+      <h>350</h>
+    </coordinates>
+    <panel_attributes>title=medical-monitor
+obj=SensorReader~a
+obj=Sensor~b
+obj=filter~c
+obj=checker~d
+obj=buffer~e
+obj=alarm~f
+obj=display~g
+
+a-&gt;&gt;&gt;b:(e1{ready:=1},e2,msg1);
+b-&gt;&gt;&gt;a:(e3,e4,msg2);
+a-&gt;&gt;&gt;c:(e5,e6,msg3);
+c-&gt;&gt;&gt;d:(e7,e8,msg4);
+d-&gt;&gt;&gt;e:(e9{ready:=0},e10{ready:=1},msg5);
+e-&gt;&gt;&gt;g:(e11,e12,msg6);
+
+combinedFragment=int (p=1) ISR1 [ready==0] ~
+d-&gt;&gt;&gt;f: (e13,e14,msg7);
+f-&gt;&gt;&gt;e: (e15,e16,msg8);
+e-&gt;&gt;&gt;g: (e17,e18,msg9);
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

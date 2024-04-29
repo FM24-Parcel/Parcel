@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLSequenceAllInOne</id>
+    <coordinates>
+      <x>80</x>
+      <y>30</y>
+      <w>410</w>
+      <h>410</h>
+    </coordinates>
+    <panel_attributes>title=Simple-Loop-Alt
+obj=T1~a
+obj=T2~b
+
+combinedFragment=loop(2,3)~
+a-&gt;&gt;&gt;b : (e0,e1,waiting1);
+combinedFragment=alt~
+a-&gt;&gt;&gt;b : (e2,e3,writing);
+..
+a-&gt;&gt;&gt;b : (e4,e5,reading);
+--
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>510</x>
+      <y>40</y>
+      <w>200</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Constraints
+0.5 &lt;= e1 - e0 &lt;= 0.8
+0 &lt; e3 - e2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>510</x>
+      <y>220</y>
+      <w>200</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Properties
+0.5 &lt;= e1 - e0 &lt;= 0.8</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

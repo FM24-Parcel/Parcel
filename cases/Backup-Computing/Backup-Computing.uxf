@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+      <element>
+          <id>UMLSequenceAllInOne</id>
+          <coordinates>
+            <x>10</x>
+            <y>10</y>
+            <w>600</w>
+            <h>500</h>
+          </coordinates>
+          <panel_attributes>title=backup-computing
+      obj=AOC~a
+      obj=MC~b
+      obj=CC~c
+      obj=SC~d
+
+      combinedFragment=loop (9,9)~
+      b-&gt;&gt;&gt;c: (e0,e1,nothing);
+
+      combinedFragment=int (p=1) IRQ1~
+      d-&gt;&gt;&gt;c : (e2,e3,nothing);
+      c-&gt;&gt;&gt;d : (e4,e5,nothing);
+      --
+      c-&gt;&gt;&gt;b : (e6,e7,nothing);
+      b-&gt;&gt;&gt;a : (e8,e9,nothing);
+      combinedFragment=int (p=2) IRQ2~
+      d-&gt;&gt;&gt;b : (e10,e11,nothing);
+      --
+      --
+
+
+      </panel_attributes>
+          <additional_attributes/>
+        </element>
+
+        <element>
+              <id>UMLNote</id>
+              <coordinates>
+                <x>800</x>
+                <y>18</y>
+                <w>198</w>
+                <h>198</h>
+              </coordinates>
+              <panel_attributes>Constraints
+        e2-e0=0
+        e10-e0=400
+        2&lt;=e8-e7&lt;=4
+        128&lt;=^(e5-e2)&lt;=132
+        232&lt;=^(e7-e0)&lt;=256
+        8&lt;=^(e9-e8)&lt;=10
+        28&lt;=^(e11-e10)&lt;=32
+          </panel_attributes>
+              <additional_attributes/>
+            </element>
+            <element>
+                <id>UMLNote</id>
+                <coordinates>
+                  <x>800</x>
+                  <y>243</y>
+                  <w>180</w>
+                  <h>180</h>
+                </coordinates>
+                <panel_attributes>Properties
+            10&lt;e9-e8
+        </panel_attributes>
+                <additional_attributes/>
+              </element>
+
+</diagram>

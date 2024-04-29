@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>810</x>
+      <y>5</y>
+      <w>100</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Constraints
+0&lt;e7-e1&lt;=150
+10&lt;^(e20-e15)&lt;=20
+5&lt;e30-e25&lt;=10
+0&lt;e36-e28&lt;=15
+0&lt;e40-e35&lt;=15
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>810</x>
+      <y>75</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Properties
+0&lt;^(e3-e2)&lt;=200
+1&lt;e12-e11&lt;=100
+2&lt;e22-e21&lt;=150
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSequenceAllInOne</id>
+    <coordinates>
+      <x>0</x>
+      <y>5</y>
+      <w>800</w>
+      <h>570</h>
+    </coordinates>
+    <panel_attributes>title=LargerCase
+obj=G~g
+obj=H~h
+obj=I~i
+obj=J~j
+obj=K~k
+obj=L~l
+obj=M~m
+obj=N~n
+
+g-&gt;&gt;&gt;h : (e0,e1,m1);
+i-&gt;&gt;&gt;j : (e4,e5,m2);
+h-&gt;&gt;&gt;k : (e8,e9,m3);
+l-&gt;&gt;&gt;m : (e12,e13,m4);
+
+combinedFragment=alt ~
+h-&gt;&gt;&gt;k : (e16,e17,altMsg1);
+..
+i-&gt;&gt;&gt;l : (e18,e19,altMsg2);
+--
+j-&gt;&gt;&gt;m : (e20,e21,altMsg3);
+k-&gt;&gt;&gt;n : (e22,e23,altMsg4);
+
+combinedFragment=loop (3,6)~
+m-&gt;&gt;&gt;n : (e24,e25,loopMsg1);
+n-&gt;&gt;&gt;g : (e26,e27,loopMsg2);
+--
+
+combinedFragment=int(p=1) ~
+h-&gt;&gt;&gt;i : (e28,e29,intMsg1);
+i-&gt;&gt;&gt;j : (e30,e31,intMsg2);
+j-&gt;&gt;&gt;k : (e32,e33,intMsg3);
+k-&gt;&gt;&gt;l : (e34,e35,intMsg4);
+l-&gt;&gt;&gt;m : (e36,e37,intMsg5);
+m-&gt;&gt;&gt;n : (e38,e39,intMsg6);
+--
+
+combinedFragment=int(p=2) ~
+g-&gt;&gt;&gt;h : (e40,e41,intMsg7);
+h-&gt;&gt;&gt;i : (e42,e43,intMsg8);
+i-&gt;&gt;&gt;j : (e44,e45,intMsg9);
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

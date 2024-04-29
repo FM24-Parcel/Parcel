@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+<element>
+    <id>UMLSequenceAllInOne</id>
+    <coordinates>
+      <x>10</x>
+      <y>0</y>
+      <w>682</w>
+      <h>391</h>
+    </coordinates>
+    <panel_attributes>title=ADC-Bug
+obj=DataReader~a
+obj=DateWriter~b
+obj=DataBuffer~c
+obj=DataChecker~d
+
+    a-&gt;&gt;&gt;c : (e1,e2,msg1);
+    c-&gt;&gt;&gt;a : (e3,e4,msg2);
+    a-&gt;&gt;&gt;d : (e5,e6,msg3);
+    d-&gt;&gt;&gt;c : (e7,e8,msg4);
+
+    combinedFragment=int (p=1) ISR1 ~
+    b-&gt;&gt;&gt;c : (e9,e10,msg5);
+    --
+    </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>30</x>
+      <y>420</y>
+      <w>200</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Constraints
+8 &lt;= ^(e4 - e1) &lt;= 16
+0 &lt; e5-e4 &lt; 1
+2 &lt;= ^(e6 - e5) &lt;= 4
+0 &lt; e7 - e6 &lt; 1
+4 &lt;= ^(e8 - e7) &lt;= 6
+3 &lt; e10 - e9 &lt; 4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>360</x>
+      <y>420</y>
+      <w>200</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Properties
+0&lt;e8-e10
+  </panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

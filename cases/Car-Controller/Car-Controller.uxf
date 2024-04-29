@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1288</x>
+      <y>16</y>
+      <w>200</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>Constraints
+2 &lt;= ^(e4 - e1) &lt;= 6
+0 &lt; e5-e4 &lt; 1
+1 &lt; ^(e6 - e5) &lt; 3
+2 &lt;= ^(e10 - e7) &lt;= 6
+0 &lt; e11 - e10 &lt; 1
+1 &lt; ^(e12 - e11) &lt; 3
+4 &lt; ^(e16 - e13) &lt; 8
+4 &lt; ^(e20 - e17) &lt;= 8
+1 &lt;= ^(e22 - e21) &lt;= 2
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1288</x>
+      <y>296</y>
+      <w>200</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Properties
+  e6-e1&lt;29
+  </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSequenceAllInOne</id>
+    <coordinates>
+      <x>0</x>
+      <y>8</y>
+      <w>1280</w>
+      <h>600</h>
+    </coordinates>
+    <panel_attributes>title=car-controller
+obj=sensorReader~a
+obj=acceleratorReader~b
+obj=sensorWriter~c
+obj=acceleratorWriter~d
+obj=sensor~e
+obj=accelerator~f
+obj=stopProc~g
+obj=MainProc~h
+
+a-&gt;&gt;&gt;e:(e1,e2,msg0);
+e-&gt;&gt;&gt;a:(e3,e4,msg1);
+a-&gt;&gt;&gt;h:(e5{x:=0},e6{x:=1},msg2);
+a-&gt;&gt;&gt;f:(e7,e8,msg3);
+f-&gt;&gt;&gt;a:(e9,e10,msg4);
+a-&gt;&gt;&gt;h:(e11{x:=0},e12{x:=1},msg5);
+
+combinedFragment=int (p=1) [x] ISR1 ~
+c-&gt;&gt;&gt;e:(e14,e13,msg6);
+e-&gt;&gt;&gt;c:(e16,e15,msg7);
+--
+
+combinedFragment=int (p=1) [x] ISR2 ~
+d-&gt;&gt;&gt;f:(e18,e17,msg8);
+f-&gt;&gt;&gt;d:(e19,e20,msg9);
+--
+combinedFragment=int (p=1) ISR3~
+g-&gt;&gt;&gt;h:(e21,e22,msg10);
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

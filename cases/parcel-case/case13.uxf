@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>4</zoom_level>
+  <element>
+    <id>UMLSequenceAllInOne</id>
+    <coordinates>
+      <x>4</x>
+      <y>12</y>
+      <w>796</w>
+      <h>564</h>
+    </coordinates>
+    <panel_attributes>title=ComprehensiveInteractionDiagram
+obj=A~a
+obj=B~b
+obj=C~c
+obj=D~d
+obj=E~e
+obj=F~f
+obj=G~g
+obj=H~h
+obj=I~i
+obj=J~j
+
+a-&gt;&gt;&gt;b : (e0,e1,m1);
+b-&gt;&gt;&gt;c : (e2,e3,m2);
+c-&gt;&gt;&gt;d : (e4,e5,m3);
+
+combinedFragment=alt ~
+d-&gt;&gt;&gt;e : (e6,e7,altMsg1);
+..
+e-&gt;&gt;&gt;d : (e8,e9,altMsg2);
+--
+
+d-&gt;&gt;&gt;e : (e10,e11,m4);
+
+combinedFragment=loop (3,5) ~
+e-&gt;&gt;&gt;f : (e12,e13,loopMsg1);
+f-&gt;&gt;&gt;e : (e14,e15,loopMsg2);
+--
+
+f-&gt;&gt;&gt;g : (e16,e17,m5);
+
+combinedFragment=alt ~
+g-&gt;&gt;&gt;h : (e18,e19,altMsg3);
+..
+h-&gt;&gt;&gt;g : (e20,e21,altMsg4);
+--
+
+g-&gt;&gt;&gt;h : (e22,e23,m6);
+
+combinedFragment=loop (2,4) ~
+h-&gt;&gt;&gt;i : (e24,e25,loopMsg3);
+i-&gt;&gt;&gt;h : (e26,e27,loopMsg4);
+--
+
+combinedFragment=int (p=10)  ~
+i-&gt;&gt;&gt;j :(e28,e29,msg7);
+j-&gt;&gt;&gt;i :(e30,e31,msg8);
+--
+
+combinedFragment=int (p=8) ~
+j-&gt;&gt;&gt;a :(e32,e33,msg9);
+a-&gt;&gt;&gt;j :(e34,e35,msg10);
+--
+
+combinedFragment=int (p=6)  ~
+b-&gt;&gt;&gt;c :(e36,e37,msg11);
+c-&gt;&gt;&gt;b :(e38,e39,msg12);
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>804</x>
+      <y>20</y>
+      <w>84</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>Constraints
+4 &lt;= e1 - e0 &lt;= 9
+^(e3-e2) &lt;= 7
+2 &lt;= ^(e7 - e6) &lt;= 5
+0&lt;= e9 - e8 &lt;= 4
+^(e11-e10) &lt;= 3
+1 &lt;= e15 - e14 &lt;= 6
+^(e17 - e16) &lt;= 8
+3 &lt;= e23 - e22 &lt;= 2
+^(e27 - e26) &lt;= 7
+1 &lt;= ^(e31 - e30) &lt;= 2
+    </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>804</x>
+      <y>100</y>
+      <w>84</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Properties
+^(e1-e0)&lt;800
+e5-e4&lt;700
+^(e9-e8)&lt;650
+e13-e12&lt;600
+^(e21-e20)&lt;550
+e29-e28&lt;500
+^(e35-e34)&lt;450
+    </panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1300</x>
+      <y>18</y>
+      <w>198</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>Constraints
+2 &lt;= ^(e4 - e1) &lt;= 4
+0 &lt; e5-e4 &lt; 1
+2 &lt; ^(e6 - e5) &lt; 4
+0 &lt; e7 - e6 &lt; 1
+1 &lt;= ^(e8 - e7) &lt;= 2
+0 &lt; e9 - e8 &lt; 1
+2 &lt;= ^(e10 - e9) &lt;= 4
+4 &lt; ^(e16 - e11) &lt; 8
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1300</x>
+      <y>243</y>
+      <w>180</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>Properties
+e10-e1&lt;20</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSequenceAllInOne</id>
+    <coordinates>
+      <x>10</x>
+      <y>10</y>
+      <w>1000</w>
+      <h>400</h>
+    </coordinates>
+    <panel_attributes>title=fridge-controller
+obj=sensorReader~a
+obj=sensor~b
+obj=dataReader~c
+obj=dataChecker~d
+obj=dataBuffer~e
+obj=openOrClose~f
+obj=Proc~g
+
+a-&gt;&gt;&gt;b:(e1{ready:=0},e2,msg1);
+b-&gt;&gt;&gt;a:(e3,e4,msg2);
+a-&gt;&gt;&gt;d:(e5,e6,msg3);
+d-&gt;&gt;&gt;e:(e7,e8{ready:=1},msg4);
+e-&gt;&gt;&gt;g:(e9,e10,msg5);
+
+combinedFragment=int (p=1) ISR[ready==1]~
+c-&gt;&gt;&gt;e: (e11,e12,msg6);
+e-&gt;&gt;&gt;c: (e13,e14,msg7);
+c-&gt;&gt;&gt;f: (e15,e16,msg8);
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

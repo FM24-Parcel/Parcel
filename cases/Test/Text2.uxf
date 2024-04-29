@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>10</x>
+      <y>10</y>
+      <w>200</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Constraints
+1&lt;= e0 - e1 &lt;= 5
+0.5 &lt;= e2 - e3 &lt;= 2
+1 &lt;= e4 - e5 &lt;= 10
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>10</x>
+      <y>120</y>
+      <w>200</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Properties
+e1 &gt; e0
+e3 &gt; e2
+e5 &gt; e4
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSequenceAllInOne</id>
+    <coordinates>
+      <x>220</x>
+      <y>10</y>
+      <w>800</w>
+      <h>600</h>
+    </coordinates>
+    <panel_attributes>title=ExampleSequenceDiagram
+obj=A~a
+obj=B~b
+obj=C~c
+obj=D~d
+obj=E~e
+obj=F~f
+
+a-&gt;&gt;&gt;b : (e0,e1,m1);
+c-&gt;&gt;&gt;d : (e2,e3,m2);
+
+combinedFragment=alt ~
+b-&gt;&gt;&gt;c : (e4,e5,altMsg1);
+..
+c-&gt;&gt;&gt;b : (e6,e7,altMsg2);
+--
+
+combinedFragment=loop (2,5) ~
+d-&gt;&gt;&gt;a : (e8,e9,loopMsg1);
+a-&gt;&gt;&gt;d : (e10,e11,loopMsg2);
+--
+
+combinedFragment=int (p=10) [INTR_MASK1=1] ~
+b-&gt;&gt;&gt;c :(e12,e13,msg3);
+c-&gt;&gt;&gt;d :(e14,e15,msg4);
+--
+
+combinedFragment=int (p=7) [INTR_MASK2=0] ~
+d-&gt;&gt;&gt;e :(e16,e17,msg5);
+e-&gt;&gt;&gt;b :(e18,e19,msg6);
+--
+
+combinedFragment=int (p=5) ~
+e-&gt;&gt;&gt;f :(e20,e21,msg7);
+f-&gt;&gt;&gt;c :(e22,e23,msg8);
+--
+
+combinedFragment=int (p=3) [INTR_MASK3=1] ~
+a-&gt;&gt;&gt;f :(e24,e25,msg9);
+f-&gt;&gt;&gt;d :(e26,e27,msg10);
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

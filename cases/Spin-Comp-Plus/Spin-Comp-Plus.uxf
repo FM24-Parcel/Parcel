@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>738</x>
+      <y>18</y>
+      <w>198</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>Constraints
+16 &lt;= ^(e1 - e0) &lt;= 20
+2 &lt; e2-e0 &lt; 4
+2 &lt;= e8 - e7 &lt;= 5
+16 &lt;= ^(e7 - e6) &lt;= 50
+16 &lt;= ^(e9 - e8) &lt;= 40
+56 &lt;= e10 - e1 &lt;= 128
+40 &lt;= e9 - e8 &lt;= 60
+24 &lt;= ^(e3 - e2) &lt;= 30
+128 &lt;= ^(e5 - e4) &lt;= 132
+232 &lt;= e6 - e1 &lt;= 256
+28 &lt;= ^(e11 - e10) &lt;= 32
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>747</x>
+      <y>243</y>
+      <w>180</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>Properties
+0&lt;e9-e0&lt;1000</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSequenceAllInOne</id>
+    <coordinates>
+      <x>54</x>
+      <y>9</y>
+      <w>675</w>
+      <h>504</h>
+    </coordinates>
+    <panel_attributes>title=Spin-Comp
+obj=AOC~a
+obj=MC~b
+obj=CC~c
+obj=SC~d
+
+
+combinedFragment=loop (2,3)~
+b-&gt;&gt;&gt;c: (e0,e1,nothing);
+
+combinedFragment= int (p=1) (1,3) IRQ1~
+d-&gt;&gt;&gt;c : (e2,e3,nothing);
+c-&gt;&gt;&gt;d : (e4,e5,nothing);
+--
+c-&gt;&gt;&gt;b : (e6,e7,nothing);
+b-&gt;&gt;&gt;a : (e8,e9,nothing);
+combinedFragment= int (p=1) (2,2,4.5) IRQ2~
+d-&gt;&gt;&gt;b : (e10,e11,nothing);
+--
+
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

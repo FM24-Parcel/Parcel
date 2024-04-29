@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLSequenceAllInOne</id>
+    <coordinates>
+      <x>40</x>
+      <y>40</y>
+      <w>350</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>title=altitude-display
+obj=altitudeReader~a
+obj=altimeterRemoteTerminal~b
+obj=bufferReader~c
+obj=buffer~d
+obj=calculator~e
+obj=displayer~f
+
+a-&gt;&gt;&gt;b:(e1,e2,msg1);
+b-&gt;&gt;&gt;a:(e3,e4,msg2);
+a-&gt;&gt;&gt;d:(e5{ready:=0},e6{ready:=1},msg3);
+d-&gt;&gt;&gt;f:(e7,e8,msg4);
+
+combinedFragment=int (p=1) ISR[ready==0]~
+c-&gt;&gt;&gt;d:(e9,e10,msg5);
+d-&gt;&gt;&gt;c: (e11,e12,msg6);
+c-&gt;&gt;&gt;e: (e13,e14,msg7);
+e-&gt;&gt;&gt;d: (e15,e16,msg8);
+d-&gt;&gt;&gt;f: (e17,e18,msg9);
+--
+
+</panel_attributes>
+<additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>470</x>
+      <y>40</y>
+      <w>200</w>
+      <h>130</h>
+    </coordinates>
+
+    <panel_attributes>Constraints
+0 &lt; e5-e4 &lt; 1
+0 &lt; ^(e6 - e5) &lt; 4
+0 &lt; e7 - e6 &lt; 1
+2 &lt;= ^(e8 - e7) &lt;= 6
+14 &lt;= ^(e18 - e9) &lt;= 25
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1500</x>
+      <y>243</y>
+      <w>180</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>Properties
+    10 &lt;= ^(e4 - e1) &lt;= 20
+    e18-e1&lt;49
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

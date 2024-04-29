@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLSequenceAllInOne</id>
+    <coordinates>
+      <x>220</x>
+      <y>0</y>
+      <w>1800</w>
+      <h>1930</h>
+    </coordinates>
+    <panel_attributes>title=ExtendedExampleSequenceDiagram
+obj=A~a
+obj=B~b
+obj=C~c
+obj=D~d
+obj=E~e
+obj=F~f
+obj=G~g
+obj=H~h
+obj=I~i
+
+a-&gt;&gt;&gt;b : (e0,e1,m1);
+b-&gt;&gt;&gt;c : (e2,e3,m2);
+c-&gt;&gt;&gt;d : (e4,e5,m3);
+d-&gt;&gt;&gt;e : (e6,e7,m4);
+e-&gt;&gt;&gt;f : (e8,e9,m5);
+f-&gt;&gt;&gt;g : (e10,e11,m6);
+g-&gt;&gt;&gt;h : (e12,e13,m7);
+h-&gt;&gt;&gt;i : (e14,e15,m8);
+
+combinedFragment=alt ~
+b-&gt;&gt;&gt;c : (e16,e17,altMsg1);
+..
+c-&gt;&gt;&gt;b : (e18,e19,altMsg2);
+--
+
+combinedFragment=alt ~
+d-&gt;&gt;&gt;e : (e20,e21,altMsg3);
+..
+e-&gt;&gt;&gt;d : (e22,e23,altMsg4);
+--
+
+combinedFragment=loop (2,5) ~
+f-&gt;&gt;&gt;g : (e24,e25,altMsg5);
+g-&gt;&gt;&gt;f : (e26,e27,altMsg6);
+--
+
+combinedFragment=alt ~
+g-&gt;&gt;&gt;h : (e28,e29,loopMsg1);
+..
+h-&gt;&gt;&gt;i : (e30,e31,loopMsg2);
+--
+
+combinedFragment=loop (3,6) ~
+a-&gt;&gt;&gt;b : (e32,e33,loopMsg3);
+b-&gt;&gt;&gt;a : (e34,e35,loopMsg4);
+--
+
+combinedFragment=loop (4,7) ~
+c-&gt;&gt;&gt;d : (e36,e37,loopMsg5);
+d-&gt;&gt;&gt;c : (e38,e39,loopMsg6);
+--
+
+combinedFragment=int (p=2) ~
+b-&gt;&gt;&gt;c :(e40,e41,msg9);
+c-&gt;&gt;&gt;d :(e42,e43,msg10);
+--
+
+combinedFragment=int (p=1) [INTR_MASK2=0] ~
+d-&gt;&gt;&gt;e :(e44,e45,msg11);
+e-&gt;&gt;&gt;b :(e46,e47,msg12);
+--
+
+combinedFragment=int (p=1) ~
+e-&gt;&gt;&gt;f :(e48,e49,msg13);
+f-&gt;&gt;&gt;c :(e50,e51,msg14);
+--
+
+combinedFragment=int (p=3) [INTR_MASK3=1] ~
+a-&gt;&gt;&gt;f :(e52,e53,msg15);
+f-&gt;&gt;&gt;d :(e54,e55,msg16);
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>20</x>
+      <y>20</y>
+      <w>180</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Constraints
+1 &lt;= ^(e1 - e0) &lt;= 5
+2 &lt; e2-e0 &lt; 4
+2 &lt; e6-e7 &lt; 4
+0&lt;e10-e11&lt;5
+3 &lt;= e33 - e32&lt;10
+e17-e9&lt;0
+0&lt;e1-e0&lt;10
+e47-e46&lt;0
+    </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>10</x>
+      <y>260</y>
+      <w>180</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>Properties
+0&lt;e1-e0&lt;1000
+1&lt;e12-e11&lt;100
+2&lt;e22-e21&lt;150
+    </panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

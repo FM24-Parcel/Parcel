@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLSequenceAllInOne</id>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>820</w>
+      <h>470</h>
+    </coordinates>
+    <panel_attributes>title=orbit-upload
+obj=DataRecv~a
+obj=DataChecker~b
+obj=uBuffer~c
+obj=uBufferRd~d
+obj=Bus~e
+
+combinedFragment=loop (1,100) ~
+a-&gt;&gt;&gt;b:(e1,e2,msg1);
+a-&gt;&gt;&gt;b:(e3,e4,msg2);
+a-&gt;&gt;&gt;c:(e5{ready:=0},e6{ready:=1},msg3);
+--
+combinedFragment=int (p=2) DMA~
+c-&gt;&gt;&gt;d:(e7,e8,msg4);
+--
+
+combinedFragment=int (p=1) 1153B ~
+a-&gt;&gt;&gt;c:(e9,e10,msg5);
+c-&gt;&gt;&gt;e:(e11,e12{ready:=0},msg6);
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>850</x>
+      <y>18</y>
+      <w>198</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>Constraints
+2&lt;=^(e2-e1)&lt;=3
+5&lt;=e3-e1&lt;=8
+16&lt;=^(e6-e5)&lt;=20
+0&lt;e5-e3&lt;2
+16&lt;=^(e7-e8)&lt;=32
+0&lt;^(e12-e9)&lt;=10
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+      <id>UMLNote</id>
+      <coordinates>
+        <x>850</x>
+        <y>243</y>
+        <w>180</w>
+        <h>117</h>
+      </coordinates>
+      <panel_attributes>Properties
+  e6-e12 &lt;0</panel_attributes>
+      <additional_attributes/>
+    </element>
+</diagram>
