@@ -32,5 +32,58 @@ You can choose the switch of the accelerating tactic with two parameters. The fo
 ```shell
   java -jar --enable-preview target/Parcel-1.0-SNAPSHOT.jar llm-cases/cases1 true false 
 ```
-The first parameter is the switch of the tactic **Unobservable event reduction**, the second parameter is the switch of the tactic **Zone partition**. 
+The first parameter is the switch of the tactic **Unobservable event reduction**, and the second parameter is the switch of the tactic **Zone partition**. 
 The value of these parameters is `true` or `false`.
+
+### Experimental Results
+We provide the experimental results in the paper as follows:
+
+| test-cases         | msg | lifeline | frag | alt | loop | int | prior | cons | prop | result | PARCEl(s) |
+|--------------------|-----|----------|------|-----|------|-----|-------|------|------|--------|-----------|
+| ADC\_Bug           | 4   | 5        | 1    | 0   | 0    | 1   | 1     | 6    | 1    | unsat  | 0.083     |
+| fridge\_controller | 7   | 8        | 1    | 0   | 0    | 1   | 1     | 8    | 1    | unsat  | 0.075     |
+| altitude\_display  | 6   | 9        | 1    | 0   | 0    | 1   | 1     | 5    | 2    | unsat  | 0.085     |
+| medical\_monitor   | 7   | 9        | 1    | 0   | 0    | 1   | 1     | 11   | 1    | unsat  | 0.083     |
+| time\_sync         | 4   | 11       | 2    | 0   | 1    | 1   | 1     | 4    | 1    | unsat  | 0.161     |
+| orbit\_upload      | 5   | 6        | 3    | 0   | 1    | 2   | 1     | 6    | 1    | unsat  | 2.117     |
+| backup\_computing  | 4   | 6        | 3    | 0   | 1    | 2   | 2     | 7    | 1    | unsat  | 0.079     |
+| system\_tick       | 4   | 7        | 2    | 0   | 0    | 2   | 2     | 6    | 1    | unsat  | 0.112     |
+| satellite\_spin    | 4   | 7        | 3    | 0   | 1    | 2   | 2     | 7    | 1    | unsat  | 0.284     |
+| car\_controller    | 8   | 11       | 3    | 0   | 0    | 3   | 2     | 9    | 1    | unsat  | 0.131     |
+| task\_rotate       | 11  | 14       | 3    | 0   | 0    | 3   | 1     | 7    | 1    | sat    | 0.074     |
+
+
+
+| llm-cases | msg    | lifeline | frag | alt | loop | int | prior | cons | prop | result | PARCEl(s) | -UER(s)   | -ZP(s)  |
+|-----------|--------|----------|------|-----|------|-----|-------|------|------|--------|-----------|-----------|---------|
+| case1     | 46       | 8    | 10  | 0    | 1   | 9     | 2    | 11   | 7      | unsat     | 0.14      | timeout | 0.28    |
+| case2     | 13       | 6    | 6   | 1    | 1   | 4     | 4    | 3    | 3      | unsat     | 0.08      | 331.55  | 0.17    |
+| case3     | 22       | 8    | 6   | 1    | 1   | 2     | 2    | 4    | 3      | sat       | 0.11      | 0.80    | 0.10    |
+| case4     | 19       | 8    | 6   | 1    | 1   | 4     | 4    | 7    | 8      | sat       | 0.08      | 0.10    | 0.11    |
+| case5     | 27       | 9    | 10  | 3    | 3   | 4     | 3    | 7    | 7      | sat       | 0.11      | 0.34    | 0.48    |
+| case6     | 14       | 7    | 4   | 2    | 1   | 1     | 1    | 7    | 8      | sat       | 0.18      | 0.30    | 0.25    |
+| case7     | 20       | 7    | 7   | 2    | 1   | 4     | 4    | 8    | 8      | sat       | 0.10      | 20.55   | 0.14    |
+| case8     | 20       | 7    | 7   | 2    | 1   | 4     | 4    | 8    | 8      | sat       | 0.14      | 2.26    | 0.24    |
+| case9     | 20       | 7    | 5   | 2    | 1   | 2     | 2    | 7    | 8      | sat       | 0.14      | 0.18    | 0.14    |
+| case10    | 16       | 8    | 7   | 2    | 2   | 3     | 3    | 7    | 7      | sat       | 0.17      | 1.48    | 0.22    |
+| case11    | 17       | 9    | 7   | 3    | 3   | 1     | 1    | 9    | 6      | sat       | 0.68      | 1.45    | 1.03    |
+| case12    | 28       | 11   | 10  | 3    | 3   | 4     | 2    | 9    | 6      | sat       | 0.07      | 3.34    | 0.09    |
+| case13    | 20       | 10   | 8   | 2    | 3   | 3     | 3    | 10   | 7      | sat       | 13.09     | 30.48   | 57.82   |
+| case14    | 20       | 11   | 7   | 2    | 2   | 3     | 3    | 10   | 7      | unsat     | 1309.08   | timeout | timeout |
+| case15    | 19       | 10   | 6   | 1    | 2   | 3     | 3    | 14   | 7      | unsat     | 44.65     | 101.10  | 62.47   |
+| case16    | 18       | 10   | 6   | 2    | 1   | 3     | 3    | 15   | 7      | unsat     | 440.29    | 570.43  | 539.79  |
+| case17    | 19       | 11   | 7   | 2    | 2   | 3     | 3    | 13   | 8      | unsat     | 2.73      | 129.58  | 7.88    |
+| case18    | 20       | 10   | 5   | 0    | 2   | 3     | 3    | 14   | 7      | unsat     | 56.38     | 56.44   | 54.26   |
+| case19    | 28       | 9    | 15  | 3    | 1   | 8     | 3    | 17   | 8      | unsat     | 0.12      | 553.61  | 0.13    |
+| case20    | 17       | 8    | 6   | 2    | 2   | 2     | 2    | 12   | 3      | unsat     | 0.14      | 10.84   | 1.24    |
+| case21    | 17       | 8    | 6   | 3    | 1   | 2     | 2    | 10   | 4      | unsat     | 2.17      | 2.42    | 2.72    |
+| case22    | 19       | 8    | 5   | 1    | 2   | 2     | 2    | 14   | 6      | unsat     | 1.85      | 2.10    | 1.96    |
+| case23    | 17       | 6    | 7   | 3    | 2   | 2     | 2    | 10   | 7      | unsat     | 0.04      | 1.22    | 0.26    |
+| case24    | 15       | 8    | 5   | 2    | 1   | 2     | 1    | 10   | 6      | unsat     | 0.19      | 331.55  | 0.17    |
+| case25    | 15       | 6    | 5   | 2    | 2   | 1     | 1    | 9    | 5      | unsat     | 0.15      | 0.17    | 0.15    |
+| case26    | 19       | 7    | 7   | 2    | 2   | 3     | 2    | 10   | 4      | unsat     | 15.38     | 259.27  | 38.01   |
+| case27    | 25       | 6    | 9   | 2    | 2   | 5     | 3    | 15   | 7      | sat       | 0.15      | timeout | 27.18   |
+| case28    | 20       | 10   | 7   | 3    | 2   | 2     | 2    | 12   | 4      | unsat     | 8.29      | 25.56   | 10.24   |
+| case29    | 15       | 8    | 6   | 3    | 0   | 3     | 2    | 10   | 5      | unsat     | 0.19      | 1.22    | 0.26    |
+| case30    | 19       | 6    | 8   | 3    | 2   | 3     | 3    | 14   | 5      | unsat     | 294.14    | 1551.00 | 488.61  |
+
