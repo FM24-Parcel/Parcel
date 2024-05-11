@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>738</x>
+      <y>18</y>
+      <w>198</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>Constraints
+8 &lt;= ^(e4 - e1) &lt;= 16
+0 &lt; ^(e6 - e5) &lt; 4
+8 &lt;= ^(e10 - e7) &lt;= 16
+0 &lt; e11 - e10 &lt;= 1
+0 &lt; ^(e12 - e11) &lt; 4
+10 &lt; ^(e14 - e13) &lt;= 20
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>747</x>
+      <y>243</y>
+      <w>180</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>Properties
+e6-e5&lt;45</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSequenceAllInOne</id>
+    <coordinates>
+      <x>54</x>
+      <y>9</y>
+      <w>500</w>
+      <h>400</h>
+    </coordinates>
+    <panel_attributes>title=system-tick
+obj=CounterReader~a
+obj=Counter~b
+obj=CounterWriter~c
+obj=MainProc~d
+
+a-&gt;&gt;&gt;b:(e1,e2,msg1);
+b-&gt;&gt;&gt;a:(e3,e4,msg2);
+a-&gt;&gt;&gt;d:(e5,e6,msg3);
+
+combinedFragment=int (p=1) ISR1~
+a-&gt;&gt;&gt;b:(e7,e8,msg4);
+b-&gt;&gt;&gt;a: (e9,e10,msg5);
+a-&gt;&gt;&gt;c:(e11,e12,msg6);
+--
+combinedFragment=int (p=2) ISR2~
+a-&gt;&gt;&gt;c:(e13,e14,msg6);
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

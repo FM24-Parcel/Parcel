@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>4</zoom_level>
+  <element>
+    <id>UMLSequenceAllInOne</id>
+    <coordinates>
+      <x>8</x>
+      <y>4</y>
+      <w>796</w>
+      <h>488</h>
+    </coordinates>
+    <panel_attributes>title=RefinedInteractionModel
+obj=A~a
+obj=B~b
+obj=C~c
+obj=D~d
+obj=E~e
+obj=F~f
+obj=G~g
+obj=H~h
+obj=I~i
+obj=J~j
+
+a-&gt;&gt;&gt;b : (e0,e1,m1);
+b-&gt;&gt;&gt;c : (e2,e3,m2);
+c-&gt;&gt;&gt;d : (e4,e5,m3);
+
+d-&gt;&gt;&gt;e : (e6,e7,altMsg1);
+e-&gt;&gt;&gt;d : (e8,e9,altMsg2);
+
+
+e-&gt;&gt;&gt;f : (e10,e11,m4);
+
+combinedFragment=loop (3,5) ~
+f-&gt;&gt;&gt;g : (e12,e13,loopMsg1);
+g-&gt;&gt;&gt;f : (e14,e15,loopMsg2);
+--
+
+g-&gt;&gt;&gt;h : (e16,e17,m5);
+
+h-&gt;&gt;&gt;i : (e18,e19,altMsg3);
+i-&gt;&gt;&gt;h : (e20,e21,altMsg4);
+
+
+i-&gt;&gt;&gt;j : (e22,e23,m6);
+
+combinedFragment=loop (2,4) ~
+j-&gt;&gt;&gt;a : (e24,e25,loopMsg3);
+a-&gt;&gt;&gt;j : (e26,e27,loopMsg4);
+--
+
+combinedFragment=int (p=9) INTRMASK1 ~
+a-&gt;&gt;&gt;b :(e28,e29,msg7);
+b-&gt;&gt;&gt;a :(e30,e31,msg8);
+--
+
+combinedFragment=int (p=7) INTRMASK2 ~
+c-&gt;&gt;&gt;d :(e32,e33,msg9);
+d-&gt;&gt;&gt;c :(e34,e35,msg10);
+--
+
+combinedFragment=int (p=5) INTRMASK3 ~
+e-&gt;&gt;&gt;f :(e36,e37,msg11);
+f-&gt;&gt;&gt;e :(e38,e39,msg12);
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>820</x>
+      <y>16</y>
+      <w>72</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>Constraints
+3 &lt;= e1 - e0 &lt;= 7
+4 &lt;= ^(e3-e2) &lt;= 9
+2 &lt;= e5 - e4 &lt;= 7
+1 &lt;= ^(e9 - e8) &lt;= 5
+0 &lt;= e11 - e10 &lt;= 4
+2 &lt;= ^(e13 - e12) &lt;= 3
+1 &lt;= e17 - e16 &lt;= 6
+4 &lt;= ^(e19 - e18) &lt;= 8
+5 &lt;= e23 - e22 &lt;= 4
+^(e25 - e24) &lt;= 3
+2 &lt;= e29 - e28 &lt;= 1
+1 &lt;= ^(e31 - e30) &lt;= 2
+3 &lt;= e35 - e34 &lt;= 4
+^(e37 - e36) &lt;= 5
+    </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>820</x>
+      <y>132</y>
+      <w>68</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Properties
+^(e1-e0)&lt;800
+e11-e10&lt;600
+^(e21-e20)&lt;400
+e27-e26&lt;200
+^(e33-e32)&lt;650
+e37-e36&lt;450
+^(e39-e38)&lt;300
+    </panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLSequenceAllInOne</id>
+    <coordinates>
+      <x>110</x>
+      <y>5</y>
+      <w>800</w>
+      <h>655</h>
+    </coordinates>
+    <panel_attributes>title=RandomizedSequenceDiagram
+obj=A~a
+obj=B~b
+obj=C~c
+obj=D~d
+obj=E~e
+obj=F~f
+obj=G~g
+obj=H~h
+
+a-&gt;&gt;&gt;b : (e0,e1,m1);
+b-&gt;&gt;&gt;c : (e2,e3,m2);
+c-&gt;&gt;&gt;d : (e4,e5,m3);
+d-&gt;&gt;&gt;e : (e6,e7,m4);
+e-&gt;&gt;&gt;f : (e8,e9,m5);
+combinedFragment=alt ~
+f-&gt;&gt;&gt;g : (e10,e11,m6);
+g-&gt;&gt;&gt;h : (e12,e13,m7);
+h-&gt;&gt;&gt;a : (e14,e15,m8);
+c-&gt;&gt;&gt;d : (e16,e17,altMsg1);
+..
+d-&gt;&gt;&gt;c : (e18,e19,altMsg2);
+--
+
+combinedFragment=loop (2,5) ~
+e-&gt;&gt;&gt;f : (e20,e21,loopMsg1);
+f-&gt;&gt;&gt;e : (e22,e23,loopMsg2);
+--
+
+combinedFragment=int (p=10) [INTR_MASK1=1] ~
+a-&gt;&gt;&gt;b :(e24,e25,msg3);
+b-&gt;&gt;&gt;c :(e26,e27,msg4);
+--
+
+combinedFragment=int (p=8) [INTR_MASK2=0] ~
+d-&gt;&gt;&gt;e :(e28,e29,msg5);
+e-&gt;&gt;&gt;d :(e30,e31,msg6);
+--
+
+combinedFragment=int (p=6) ~
+g-&gt;&gt;&gt;h :(e32,e33,msg7);
+h-&gt;&gt;&gt;g :(e34,e35,msg8);
+--
+
+combinedFragment=int (p=4) [INTR_MASK3=1] ~
+c-&gt;&gt;&gt;d :(e36,e37,msg9);
+d-&gt;&gt;&gt;c :(e38,e39,msg10);
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>5</x>
+      <y>15</y>
+      <w>100</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>Constraints
+4 &lt;= ^(e1 - e0) &lt;= 10
+5 &lt; e3-e2 &lt; 9
+6 &lt; e7-e6 &lt; 12
+0&lt;e9-e8&lt;7
+3 &lt;= e13 - e12&lt;11
+e17-e11&lt;0
+1&lt;e1-e0&lt;2000
+    </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>5</x>
+      <y>135</y>
+      <w>100</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>Properties
+0&lt;^(e1-e0)&lt;1000
+1&lt;^(e3-e2)&lt;100
+2&lt;^(e5-e4)&lt;150
+3&lt;e7-e6&lt;200
+4&lt;e9-e8&lt;250
+5&lt;e11-e10&lt;300
+6&lt;e13-e12&lt;350
+7&lt;^(e15-e14)&lt;400
+    </panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

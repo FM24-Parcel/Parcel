@@ -116,7 +116,7 @@ public class ChartConstructor {
         var block = new PureBlock(topo, priority, position);
         pairConstraintWithBlock((PureBlock) block);
         if (subducted&&block.localConstraints().isEmpty()) {
-            System.out.println("Subducted block: " + block);
+//            System.out.println("Subducted block: " + block);
             return Optional.empty();
         }
         var chart = new BlockChart();

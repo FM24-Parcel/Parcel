@@ -45,6 +45,7 @@ public class BlockChecker {
         var traces = new Interrupter(result._1, result._2).interrupts();
         encodeAndCheck(traces, result._3);
         long etime = System.currentTimeMillis();
+        System.out.println("All sequences are checked for unsat");
         System.out.printf("check time：%d ms.\n", (etime - this.stime));
     }
 
@@ -54,13 +55,13 @@ public class BlockChecker {
         for (BlockTrace trace : traces) {
             BooleanFormula formula = booleanManager.makeTrue();
             if (!globalConstraints.isEmpty()){
-                System.out.println("before: "+trace.size());
+//                System.out.println("before: "+trace.size());
                 var res =pruned?encodeGlobalConstraints(trace, globalConstraints)
                         :encodeGlobalConstraintsWithNotPrune(trace, globalConstraints);
                 //System.out.println("global formula");
                 formula = booleanManager.and(formula, res._1);
                 trace = res._2;
-                System.out.println("after: "+trace.size());
+//                System.out.println("after: "+trace.size());
             }
 //            trace.print();
 //            System.out.println("local formula");
@@ -82,7 +83,7 @@ public class BlockChecker {
             prover.push(formula);
             //System.out.println(prover.getStatistics());
             if (prover.isUnsat()) {
-                System.out.println("Unsat");
+//                System.out.println("Unsat");
 //                var temp=prover.getUnsatCore();
 //                checkUnSATCore(temp);
             } else {

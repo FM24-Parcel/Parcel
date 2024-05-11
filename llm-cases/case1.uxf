@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>4</zoom_level>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>776</x>
+      <y>0</y>
+      <w>108</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Constraints
+      16 &lt;= ^(e1 - e0) &lt;= 20
+      3 &lt; e26 - e1 &lt; 8
+      e34-e33&lt;5
+      12 &lt; e36 - e35 &lt;= 20
+      e38-e37&lt;8
+      e40-e39&lt;5
+      7 &lt;= e42 - e41 &lt;= 15
+      4 &lt; e44 - e43 &lt; 10
+      e46-e45&lt;6
+      11 &lt;= e48 - e47 &lt;= 18
+      e50-e49&lt;7
+    </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>776</x>
+      <y>92</y>
+      <w>104</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Properties
+      0&lt;e1-e0&lt;1000
+      1&lt;e13-e2&lt;500
+      10&lt;e5-e4&lt;100
+      2&lt;e7-e6&lt;8
+      50&lt;e9-e8&lt;200
+      3&lt;e11-e10&lt;10
+      5&lt;e13-e12&lt;20
+
+    </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSequenceAllInOne</id>
+    <coordinates>
+      <x>188</x>
+      <y>0</y>
+      <w>576</w>
+      <h>1028</h>
+    </coordinates>
+    <panel_attributes>title=LargeScaleTest
+      obj=A~a
+      obj=B~b
+      obj=C~c
+      obj=D~d
+      obj=E~e
+      obj=F~f
+      obj=G~g
+      obj=H~h
+
+      a-&gt;&gt;&gt;b : (e0,e1,m1);
+      a-&gt;&gt;&gt;b : (e2,e3,m2);
+
+      d-&gt;&gt;&gt;c : (e4,e5,m3);
+      d-&gt;&gt;&gt;c : (e6,e7,m4);
+      d-&gt;&gt;&gt;c : (e8,e9,m5);
+      d-&gt;&gt;&gt;c : (e10,e11,m6);
+      d-&gt;&gt;&gt;c : (e12,e13,m7);
+      d-&gt;&gt;&gt;c : (e14,e15,m8);
+      d-&gt;&gt;&gt;c : (e16,e17,m9);
+      d-&gt;&gt;&gt;c : (e18,e19,m10);
+
+      combinedFragment=loop(1,4)~
+      b-&gt;&gt;&gt;e : (e20,e21,loopMsg1);
+      --
+      b-&gt;&gt;&gt;c : (e22,e23,m11);
+      e-&gt;&gt;&gt;d : (e24,e25,m12);
+      f-&gt;&gt;&gt;e : (e26,e27,m13);
+
+      combinedFragment=int (p=1) (2,3) IRQ1~
+      b-&gt;&gt;&gt;c :(e28,e29,msg14);
+      e-&gt;&gt;&gt;d :(e30,e31,msg15);
+      --
+
+      combinedFragment=int (p=2) IRQ2~
+      b-&gt;&gt;&gt;c :(e32,e33,msg16);
+      b-&gt;&gt;&gt;d :(e34,e35,msg17);
+      --
+
+      combinedFragment=int (p=2) IRQ2~
+      b-&gt;&gt;&gt;c :(e36,e37,msg18);
+      b-&gt;&gt;&gt;d :(e38,e39,msg19);
+      --
+
+      combinedFragment=int (p=2) IRQ2~
+      c-&gt;&gt;&gt;d :(e40,e41,msg20);
+      c-&gt;&gt;&gt;e :(e42,e43,msg21);
+      d-&gt;&gt;&gt;e :(e44,e45,msg22);
+      f-&gt;&gt;&gt;g :(e46,e47,msg23);
+      g-&gt;&gt;&gt;h :(e48,e49,msg24);
+      h-&gt;&gt;&gt;a :(e50,e51,msg25);
+      a-&gt;&gt;&gt;b :(e52,e53,msg26);
+      b-&gt;&gt;&gt;c :(e54,e55,msg27);
+      e-&gt;&gt;&gt;f :(e56,e57,msg28);
+      g-&gt;&gt;&gt;b :(e58,e59,msg29);
+      --
+
+      combinedFragment=int (p=1) IRQ1~
+      a-&gt;&gt;&gt;b :(e60,e61,msg30);
+      b-&gt;&gt;&gt;c :(e62,e63,msg31);
+      --
+
+      combinedFragment=int (p=1) (2,3) IRQ1~
+      c-&gt;&gt;&gt;d :(e64,e65,msg32);
+      d-&gt;&gt;&gt;e :(e66,e67,msg33);
+      --
+
+      combinedFragment=int (p=2) IRQ2~
+      c-&gt;&gt;&gt;d :(e68,e69,msg34);
+      d-&gt;&gt;&gt;e :(e70,e71,msg35);
+      --
+
+      combinedFragment=int (p=1) IRQ1~
+      g-&gt;&gt;&gt;h :(e72,e73,msg36);
+      h-&gt;&gt;&gt;a :(e74,e75,msg37);
+      --
+
+      combinedFragment=int (p=1) IRQ1~
+      e-&gt;&gt;&gt;f :(e76,e77,msg38);
+      f-&gt;&gt;&gt;g :(e78,e79,msg39);
+      --
+
+      a-&gt;&gt;&gt;c : (e80,e81,msg40);
+      a-&gt;&gt;&gt;d : (e82,e83,msg41);
+      b-&gt;&gt;&gt;d : (e84,e85,msg42);
+      e-&gt;&gt;&gt;h : (e86,e87,msg43);
+      f-&gt;&gt;&gt;g : (e88,e89,msg44);
+      g-&gt;&gt;&gt;f : (e90,e91,msg45);
+      h-&gt;&gt;&gt;b : (e92,e93,msg46);
+    </panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLSequenceAllInOne</id>
+    <coordinates>
+      <x>40</x>
+      <y>40</y>
+      <w>560</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>title=Case-Fix
+obj=T1~a
+obj=T2~b
+
+
+a-&gt;&gt;&gt;b : (e0{TM1:=0},e1{TM1:=1},m1);
+
+
+combinedFragment=int (p=1) [TM1] TASK1~
+a-&gt;&gt;&gt;b : (e2,e3,m2);
+--
+
+
+combinedFragment=int (p=2) [TM2] TASK2~
+a-&gt;&gt;&gt;b : (e4,e5,m3);
+--
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>660</x>
+      <y>40</y>
+      <w>200</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Constraints
+5 &lt;= ^(e1 - e0) &lt;= 8
+10 &lt;= ^(e3 - e2) &lt;= 50
+1 &lt;= ^(e5 - e4) &lt;= 2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>660</x>
+      <y>190</y>
+      <w>200</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Properties
+5 &lt;= e1 - e0 &lt;= 15
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLSequenceAllInOne</id>
+    <coordinates>
+      <x>0</x>
+      <y>10</y>
+      <w>755</w>
+      <h>665</h>
+    </coordinates>
+    <panel_attributes>title=AdvancedSequenceDiagram
+obj=R~r
+obj=S~s
+obj=T~t
+obj=U~u
+obj=V~v
+obj=W~w
+obj=X~x
+
+r-&gt;&gt;&gt;s : (e0,e1,m1);
+
+combinedFragment=alt ~
+s-&gt;&gt;&gt;t : (e2,e3,altMsg1);
+..
+t-&gt;&gt;&gt;s : (e4,e5,altMsg2);
+
+s-&gt;&gt;&gt;u : (e6,e7,m2);
+
+combinedFragment=loop (3,5) ~
+u-&gt;&gt;&gt;v : (e8,e9,loopMsg1);
+v-&gt;&gt;&gt;u : (e10,e11,loopMsg2);
+--
+--
+
+u-&gt;&gt;&gt;w : (e12,e13,m3);
+
+combinedFragment=alt ~
+w-&gt;&gt;&gt;x : (e14,e15,altMsg3);
+..
+x-&gt;&gt;&gt;w : (e16,e17,altMsg4);
+--
+
+combinedFragment=int (p=7)  ~
+v-&gt;&gt;&gt;w :(e18,e19,msg4);
+w-&gt;&gt;&gt;x :(e20,e21,msg5);
+--
+
+w-&gt;&gt;&gt;v : (e22,e23,m4);
+
+combinedFragment=loop (2,4) ~
+x-&gt;&gt;&gt;r : (e24,e25,loopMsg3);
+r-&gt;&gt;&gt;x : (e26,e27,loopMsg4);
+--
+
+combinedFragment=int (p=2) ~
+t-&gt;&gt;&gt;u :(e28,e29,msg6);
+u-&gt;&gt;&gt;t :(e30,e31,msg7);
+--
+
+combinedFragment=int (p=5) ~
+r-&gt;&gt;&gt;s :(e32,e33,msg8);
+s-&gt;&gt;&gt;r :(e34,e35,msg9);
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>765</x>
+      <y>10</y>
+      <w>95</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Constraints
+2 &lt;= e1 - e0 &lt;= 7
+4 &lt;= ^(e3-e2) &lt;= 9
+3 &lt;= e5 - e4 &lt;= 8
+0&lt;= ^(e7-e6) &lt;= 5
+2 &lt;= e9 - e8 &lt;= 4
+^(e11-e10) &lt;= 3
+1&lt;= e13-e12 &lt;= 2
+    </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>765</x>
+      <y>100</y>
+      <w>95</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Properties
+1&lt;^(e1-e0)&lt;750
+2&lt;e3-e2&lt;600
+3&lt;^(e5-e4)&lt;450
+4&lt;e7-e6&lt;300
+5&lt;^(e9-e8)&lt;150
+    </panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

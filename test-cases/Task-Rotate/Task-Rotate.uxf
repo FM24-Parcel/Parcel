@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>112</x>
+      <y>800</y>
+      <w>392</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Constraints
+0&lt;e7-e1&lt;=88
+0&lt;e19-e7&lt;=8
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>768</x>
+      <y>800</y>
+      <w>392</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Properties
+  0&lt;e30-e1&lt;256
+  </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSequenceAllInOne</id>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>1536</w>
+      <h>784</h>
+    </coordinates>
+    <panel_attributes>title=task-rotate
+obj=Timer~a
+obj=Task1~b
+obj=Task2~c
+obj=Task3~d
+obj=Task4~e
+obj=Task5~f
+obj=Flash~g
+obj=IntODBH~h
+obj=CC~i
+obj=TimingMask~j
+obj=Fan~k
+
+a-&gt;&gt;&gt;b:(e1,e2,msg0);
+b-&gt;&gt;&gt;j:(e3,e4,msg1);
+b-&gt;&gt;&gt;f:(e5,e6,msg2);
+a-&gt;&gt;&gt;c:(e7,e8,msg3);
+c-&gt;&gt;&gt;f:(e9,e10,msg4);
+
+combinedFragment=int (p=1) IRQ1~
+h-&gt;&gt;&gt;j:(e11,e12,msg5);
+j-&gt;&gt;&gt;h:(e14,e13,msg6);
+--
+
+combinedFragment=int (p=1) IRQ2~
+i-&gt;&gt;&gt;h:(e16,e15,msg7);
+h-&gt;&gt;&gt;g:(e18,e17,msg8);
+--
+
+a-&gt;&gt;&gt;d:(e19,e20,msg9);
+d-&gt;&gt;&gt;g:(e21,e22,msg10);
+g-&gt;&gt;&gt;d:(e24,e23,msg11);
+d-&gt;&gt;&gt;f:(e25,e26,msg12);
+a-&gt;&gt;&gt;e:(e27,e28,msg13);
+e-&gt;&gt;&gt;f:(e29,e30,msg14);
+
+combinedFragment=int (p=1) IRQ3~
+i-&gt;&gt;&gt;h:(e32,e31,msg15);
+h-&gt;&gt;&gt;k:(e33,e34,msg16);
+--
+    </panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

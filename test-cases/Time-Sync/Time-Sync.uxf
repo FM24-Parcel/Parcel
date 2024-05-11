@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>990</x>
+      <y>10</y>
+      <w>230</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Constraints
+    8&lt;=^(e4-e1)&lt;=16
+    8&lt;=^(e10-e7)&lt;=16
+    10&lt;^(e20-e17)&lt;=20
+    0&lt;e13-e12&lt;2
+    </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>990</x>
+      <y>250</y>
+      <w>200</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Properties
+    e6-e22&lt;0
+    </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSequenceAllInOne</id>
+    <coordinates>
+      <x>0</x>
+      <y>10</y>
+      <w>990</w>
+      <h>680</h>
+    </coordinates>
+    <panel_attributes>title=Time-Sync
+      obj=TimeReader~a
+      obj=Counter~b
+      obj=Buffer~c
+      obj=Proc~d
+
+  combinedFragment=loop (1,6)~
+  a-&gt;&gt;&gt;b :(e1,e2,msg1);
+  b-&gt;&gt;&gt;a :(e3,e4,msg2);
+
+  a-&gt;&gt;&gt;c:(e5{x:=0},e6{x:=1},msg3);
+
+  a-&gt;&gt;&gt;b:(e7,e8,msg4);
+  b-&gt;&gt;&gt;a:(e10,e9,msg5);
+
+  a-&gt;&gt;&gt;c:(e11{x:=0},e12{x:=1},msg6);
+
+  a-&gt;&gt;&gt;d:(e13,e14,msg7);
+
+  d-&gt;&gt;&gt;c:(e16{x:=1},e15{x:=0},msg8);
+  --
+
+  combinedFragment= int (p=1) CAN [x]~
+  a-&gt;&gt;&gt;b:(e17,e18,msg9);
+  b-&gt;&gt;&gt;a:(e20,e19,msg10);
+
+  a-&gt;&gt;&gt;c:(e21,e22,msg11);
+
+  --
+  </panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

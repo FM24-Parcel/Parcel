@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLSequenceAllInOne</id>
+    <coordinates>
+      <x>220</x>
+      <y>10</y>
+      <w>800</w>
+      <h>700</h>
+    </coordinates>
+    <panel_attributes>title=AlternatingFragmentsDiagram
+obj=R~r
+obj=S~s
+obj=T~t
+obj=U~u
+obj=V~v
+obj=W~w
+obj=X~x
+
+r-&gt;&gt;&gt;s : (e0,e1,m1);
+s-&gt;&gt;&gt;t : (e2,e3,m2);
+
+combinedFragment=alt ~
+t-&gt;&gt;&gt;u : (e4,e5,altMsg1);
+..
+u-&gt;&gt;&gt;t : (e6,e7,altMsg2);
+--
+
+t-&gt;&gt;&gt;u : (e8,e9,m3);
+
+combinedFragment=loop (3,4) ~
+u-&gt;&gt;&gt;v : (e10,e11,loopMsg1);
+v-&gt;&gt;&gt;u : (e12,e13,loopMsg2);
+--
+combinedFragment=int (p=2)  ~
+v-&gt;&gt;&gt;w : (e14,e15,m4);
+--
+combinedFragment=alt ~
+w-&gt;&gt;&gt;x : (e16,e17,altMsg3);
+..
+x-&gt;&gt;&gt;w : (e18,e19,altMsg4);
+--
+
+w-&gt;&gt;&gt;x : (e20,e21,m5);
+
+combinedFragment=int (p=1)  ~
+x-&gt;&gt;&gt;r : (e22,e23,loopMsg3);
+r-&gt;&gt;&gt;x : (e24,e25,loopMsg4);
+--
+
+r-&gt;&gt;&gt;s : (e26,e27,m6);
+s-&gt;&gt;&gt;t : (e28,e29,m7);
+
+combinedFragment=loop (2,2) ~
+t-&gt;&gt;&gt;u :(e30,e31,msg8);
+u-&gt;&gt;&gt;t :(e32,e33,msg9);
+--
+
+v-&gt;&gt;&gt;w :(e38,e39,msg12);
+w-&gt;&gt;&gt;v :(e40,e41,msg13);
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1050</x>
+      <y>10</y>
+      <w>200</w>
+      <h>350</h>
+    </coordinates>
+    <panel_attributes>Constraints
+3 &lt;= e1 - e0 &lt;= 6
+^(e3-e2) &lt;= 8
+2 &lt;= e11 - e10 &lt;= 5
+^(e15 - e14) &lt;= 9
+e19 - e18 &lt;= 4
+^(e23 - e22) &lt;= 7
+e27 - e26 &lt;= 3
+    </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1050</x>
+      <y>370</y>
+      <w>200</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>Properties
+^(e1-e0)&lt;65
+e5-e4&lt;60
+^(e9-e8)&lt;55
+e13-e12&lt;50
+^(e17-e16)&lt;45
+e21-e20&lt;40
+^(e25-e24)&lt;35
+    </panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

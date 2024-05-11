@@ -8,7 +8,7 @@ import java.util.List;
 @NotNull
 public class Cases {
 
-    private static final String base = "cases";
+    private static final String base = "test-cases";
 
     public static final File case_bug = genCaseFile("Case-Bug");
 
@@ -73,6 +73,14 @@ public class Cases {
 
     private static String genCasePath(String name) {
         return base + "/" + name + "/" + name + ".uxf";
+    }
+
+    static File genFile(String name) {
+        return new File(name + ".uxf");
+//        if (name.startsWith("llm-case")) {
+//            return new File( name + ".uxf");
+//        }
+//        else return new File(base + "/" + name + "/" + name + ".uxf");
     }
 
     private static File genCaseFile(String name) {
